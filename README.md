@@ -10,3 +10,9 @@ Day 1: Pablo Picasso
   iii) The X’s & Y’s 
   iv)  The Traffic light
 
+
+Day 2: Canon Event
+  i)    Mouse events
+  ii)   Keys events
+  iii)  Lets move something! 
+  iv)   Follow me box    
