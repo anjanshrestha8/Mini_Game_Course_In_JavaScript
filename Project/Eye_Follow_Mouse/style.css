@@ -1,0 +1,25 @@
+/* *{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(55, 182, 217);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2980b9;
+
+}
+
+.face{
+    background-color:  #ffcd00;;
+    margin-top: 200px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.eye{
+    
+} */
