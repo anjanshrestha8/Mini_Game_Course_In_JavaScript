@@ -18,14 +18,14 @@ function update(){
     c.beginPath();
     c.arc(x,y,10,0,360);
     c.fill();
-    // another circle
-    c.beginPath();
-    c.arc(250,250,10,0,360);
-    c.fill();
+
+     // another circle
+     c.beginPath();
+     c.arc(250,250,10,0,360);
+     c.fill();
+     
     window.requestAnimationFrame(update);
     y+=3;
-   
-
 }
 update();
 
