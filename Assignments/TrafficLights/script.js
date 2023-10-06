@@ -6,6 +6,7 @@ let context = canvas.getContext("2d");
 context.beginPath();
 context.rect(0,0,300,300);
 context.fillStyle="	#243447";
+
 context.fill();
 
 
@@ -320,10 +321,16 @@ context.rect(210,280,30,10);
 context.fill();
 
 // create divider
+// context.beginPath();
+// context.fillStyle="white";
+// context.rect(250,280,30,10);
+// context.fill();
+
+
 context.beginPath();
 context.fillStyle="white";
-context.rect(250,280,30,10);
-context.fill();
+context.fillRect(250,280,30,10);
+// context.fill();
 
 
  
