@@ -39,7 +39,6 @@ myImage.addEventListener('load',function(){
         }
         display(){
             this.draw();
-
             this.update();
         }
     }
@@ -60,8 +59,8 @@ myImage.addEventListener('load',function(){
         c.fillRect(0,0,canvas.width,canvas.height);
         for(let i=0; i<= particleArray.length;i++){
             console.log(particleArray.length)
-            particleArray[i].draw();
-            particleArray[i].update();
+            // particleArray[i].draw();
+            particleArray[i].display(); 
         }
         requestAnimationFrame(animate);
     }
