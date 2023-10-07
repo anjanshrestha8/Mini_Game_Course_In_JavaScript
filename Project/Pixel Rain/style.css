@@ -4,6 +4,7 @@
     background-color: black;
 }
 canvas{
+    padding-top: 10%;
     border: 1px white solid;
     position: absolute;
     top: 50%;
