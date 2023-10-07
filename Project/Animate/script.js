@@ -3,46 +3,41 @@ const c =canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight ;
 
+let pos = [];
+for(let i=0;i<=10;i++){
+pos[i].x
+    var sx =4;
+    var sy =4;
+    var radius =30;
+    pos.push({ x: Math.random() * innerWidth, y: Math.random() * innerHeight });
+
+}
 
 
 
-
-
-var x =Math.random()*innerWidth;
-var y =Math.random()*innerHeight;
-var dx =Math.random() *(3 - -1)+ -1;
-var dy =Math.random() *(3 - -1)+ -1;
-var radius =30;
-
-
-    function animate(){
+function animate(){
        
-            
-        c.clearRect(0,0,innerWidth,innerHeight);
-        c.beginPath();
-        c.fillStyle="#ffcd00";
-        c.arc(x,y,radius,0,360);
-        c.stroke();
-
-       
-
         
-    
-        
+            c.clearRect(0,0,innerWidth,innerHeight);
+            c.beginPath();
+            c.fillStyle="#ffcd00";
+            c.arc(pos[i].x,pos[i].y,radius,0,360);
+            c.stroke();
     
         // canvas.addEventListener("");
         requestAnimationFrame(animate);
     
         // creating the collison on all side
-        if(x+radius> innerWidth || x-radius <0){
-            dx= -dx;
+        if(pos[i].x+radius> innerWidth || pos[i].x-radius <0){
+            sx= -sx
         }
-        if(y+radius> innerHeight || y-radius <0){
-            dy= -dy;
+        if(pos[i].y+radius> innerHeight || pos[i].y-radius <0){
+            sy= -sy;
         }
-        x+=dx;
-        y+=dy;
+        x+=sx;
+        y+=sy;
     }
     
     animate();
     
+        
