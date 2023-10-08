@@ -4,6 +4,18 @@ const c =canvas.getContext("2d");
 
 let particleArray =[];
 let totalNumber =30;
+
+    let mouseX =0;
+    let mouseY =0;
+
+
+    window.addEventListener("mousemove",(event) => {
+        console.log(event);
+         mouseX = event.clientX;
+         mouseY = event.clientY;
+    
+    
+    });
 class Particle{
     constructor(color){
         this.x = Math.random()*500;
@@ -23,6 +35,12 @@ class Particle{
     move(){
         this.y= this.y+this.y_speed;
         this.x= this.x+this.x_speed;
+        if(mouseX - this.x < 50 && mouseX - this.x > - 50){
+            this.r +=1;
+        console.log(this.r);
+
+            
+        }
 
     }
     checkCollision(){
@@ -75,6 +93,9 @@ function animate(){
 
 }
 animate();
+    
+
+
 
 
 
