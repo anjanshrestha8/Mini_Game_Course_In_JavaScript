@@ -4,34 +4,65 @@ const c = canvas.getContext('2d');
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
-
+let totalNumber=1;
+let balls =[];
 
 class Ball{
     constructor(){
-        this.x =100;
-        this.y=100;
-        this.r=50;
-        this.x_speed=3;
-        this.y_speed=2;
+        this.x =Math.random()*innerWidth;
+        this.y =Math.random()*innerHeight;
+        this.r=Math.random()*10;
+        this.x_speed=Math.random()*0.5;
+        this.y_speed=3;
+        this.color= "color" ||"red";
 
         
     }
     draw(){
         c.beginPath();
         c.arc(this.x,this.y,this.r,0,360);
-        c.fillStyle="red";
+        c.fillStyle=this.color;
         c.fill();
     }
-    update(){
+    move(){
         this.y=this.y+this.y_speed;
-        this.x=this.x+this.x_speed;
+        // this.x=this.x+this.x_speed;
+        
     }
 
     checkCollision(){
-        //right
-        if(this.x+this.r > canvas.width){
-            this.x_speed=-3;
+        // //right
+        // if(this.x+this.r >= canvas.width){
+        //     this.x_speed=-this.x_speed;
+        //     this.color='green';
+
+        // }
+        // //left
+        // if(this.x-this.r <=0){
+        //     this.x_speed=+this.x_speed;
+        //     this.color='purple';
+
+        // }
+        // //top
+        // if(this.y-this.r <=0){
+        //     this.y_speed=+this.y_speed;
+        //     this.color='black';
+        // }
+        
+        //buttom
+        if(this.y+this.r >= canvas.height){
+            this.y_speed=-this.y_speed;
+            this.color='red';
+        }else{
+            this.y_speed+=1;
         }
+        
+    }
+    update(){
+        this.draw();
+        this.move();
+        this.checkCollision();
+        
     }
 }
  let obj = new Ball();
@@ -39,9 +70,11 @@ class Ball{
 
  function animate(){
     c.clearRect(0,0,innerWidth,innerHeight);
-    obj.draw();
-    obj.update();
-    obj.checkCollision();
+    for(let i=0;i<totalNumber;i++){
+        balls.push(new Ball());
+        balls[i].update();
+    }
+    
 
     requestAnimationFrame(animate);
 

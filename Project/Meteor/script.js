@@ -73,14 +73,15 @@ class Meteor{
     reset(){
         this.x=Math.random()*innerWidth+300;
         this.y=-100;
-        this.size=2;
+        this.size=1;
         this.speed =(Math.random()+0.5)*5;
     }
     draw(){
         c.save();
-        c.strokeStyle="rgba(200,150,150,1)";
+        c.strokeStyle="rgba(255,255,255,0.3)";
          c.lineCap="round";
-         c.shadowColor="rgba(200,150,150,1)";
+         c.shadowColor="rgba(255,255,255,0.01)";
+         c.shadowBlur=70;
         for(let i =0;i<=10;i++){
             c.beginPath();
             c.moveTo(this.x,this.y);
@@ -100,7 +101,7 @@ class Meteor{
     }
 }
 //meteor lai array ma push gareko 
-for(let i=0;i<5;i++){
+for(let i=0;i<2;i++){
     meteor.push(new Meteor());
 
 }
