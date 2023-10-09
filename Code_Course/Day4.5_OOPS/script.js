@@ -61,12 +61,12 @@ class Box{
     }
     
 }
-var a = Math.random()*(400-0)+ 0;
-var b= Math.random()*(400-0)+ 0;
+var a = Math.random()*(400-0)+ 100;
+var b= Math.random()*(400-0)+ 50;
 
 
 const box = new Box(a,b,"blue");
-const box1 = new Box(a+100,b+50,"grey");
+const box1 = new Box(a+0,b+150,"grey");
 
 
 

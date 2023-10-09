@@ -78,7 +78,7 @@ class Meteor{
     }
     draw(){
         c.save();
-        c.strokeStyle="rgba(200,150,150,0.1)";
+        c.strokeStyle="rgba(200,150,150,1)";
          c.lineCap="round";
          c.shadowColor="rgba(200,150,150,1)";
         for(let i =0;i<=10;i++){
@@ -100,7 +100,7 @@ class Meteor{
     }
 }
 //meteor lai array ma push gareko 
-for(let i=0;i<3;i++){
+for(let i=0;i<5;i++){
     meteor.push(new Meteor());
 
 }
