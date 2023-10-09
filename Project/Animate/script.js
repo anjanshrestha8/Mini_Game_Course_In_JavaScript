@@ -63,13 +63,13 @@ class Particle{
                 this.color="orange";
 
         }
-        //left
+        //right
         if(this.x +this. r > canvas.width){
             this.x_speed-= 3;
             this.color="red";
 
         }
-        //right
+        //left
         else if(this.x - this.r <=0){
             this.x_speed += 3;
             this.color="purple";
