@@ -92,6 +92,7 @@ function animate(){
     // for(let i=0;i<=totalNumber;i++){
     //     particleArray[i].update();
     // }
+  
     for(let i=0;i<=totalNumber;i++){
         particleArray.push(new Particle);
         particleArray[i].update();
@@ -115,6 +116,7 @@ canvas.addEventListener("mousemove",(event) => {
 });
 canvas.addEventListener("mouseleave",(event) =>{
     cond=true;
+    rb=-5;
    
       
     
