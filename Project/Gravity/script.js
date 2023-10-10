@@ -4,7 +4,7 @@ const c = canvas.getContext('2d');
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
-let totalNumber=1;
+let totalNumber=1000;
 let balls =[];
 
 class Ball{
@@ -14,14 +14,16 @@ class Ball{
         this.r=20;
         this.x_speed=Math.random()*0.5;
         this.y_speed=4;
-        this.color= "color" ||"red";
+        this.color= "pink";
 
         
     }
     draw(){
         c.beginPath();
         c.arc(this.x,this.y,this.r,0,360);
+        c.strokeStyle="black";
         c.fillStyle=this.color;
+        c.stroke();
         c.fill();
     }
     move(){
@@ -52,10 +54,12 @@ class Ball{
         //buttom
         if(this.y+this.r >= canvas.height){
             this.y_speed=-this.y_speed;
-            this.color='red';
+            this.color="cyan";
         }else{
             this.y_speed+=1;
             console.log(this.y_speed);
+            this.color="pink";
+
         }
         
     }
