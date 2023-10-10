@@ -1,72 +1,65 @@
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
 
+
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
-let totalNumber=1000;
+let totalNumber=500;
 let balls =[];
+
+
+
 
 class Ball{
     constructor(){
-        this.x =Math.random()*innerWidth;
-        this.y =Math.random()*innerHeight;
-        this.r=20;
-        this.x_speed=Math.random()*0.5;
-        this.y_speed=4;
-        this.color= "pink";
+        this.position ={
+            x:Math.random()*innerWidth,
+            y :Math.random()*innerHeight,
+
+        }
+        this.size ={r:Math.random()*(30-20) + 20}
+        
+        this.velocity ={
+            x_speed:1,
+            y_speed:1,
+        }
+        this.acceleration =0.1;
+        this.color = "pink";
 
         
     }
     draw(){
         c.beginPath();
-        c.arc(this.x,this.y,this.r,0,360);
+        c.arc(this.position.x,this.position.y,this.size.r,0,360);
         c.strokeStyle="black";
         c.fillStyle=this.color;
         c.stroke();
         c.fill();
     }
     move(){
-        this.y=this.y+this.y_speed;
-        this.x=this.x+this.x_speed;
+        this.velocity.y_speed = this.velocity.y_speed + this.acceleration;
+        this.position.y=this.position.y+this.velocity.y_speed;
+        
         
     }
 
-    checkCollision(){
-        // //right
-        // if(this.x+this.r >= canvas.width){
-        //     this.x_speed=-this.x_speed;
-        //     this.color='green';
-
-        // }
-        // //left
-        // if(this.x-this.r <=0){
-        //     this.x_speed=+this.x_speed;
-        //     this.color='purple';
-
-        // }
-        // //top
-        // if(this.y-this.r <=0){
-        //     this.y_speed=+this.y_speed;
-        //     this.color='black';
-        // }
-        
-        //buttom
-        if(this.y+this.r >= canvas.height){
-            this.y_speed=-this.y_speed;
+    borderCollision(){
+        if(this.position.y + this.size.r >= canvas.height){
+            this.position.y =canvas.height - this.size.r;
+            this.velocity.y_speed = this.velocity.y_speed * - 0.8;
             this.color="cyan";
-        }else{
-            this.y_speed+=1;
-            console.log(this.y_speed);
-            this.color="pink ";
-
         }
+        else{
+            this.color="red";
+        }
+        
         
     }
     update(){
         this.draw();
         this.move();
-        this.checkCollision();
+        this.borderCollision();
         
     }
 }
