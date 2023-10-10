@@ -58,7 +58,7 @@ class Ball{
         }else{
             this.y_speed+=1;
             console.log(this.y_speed);
-            this.color="pink";
+            this.color="pink ";
 
         }
         
@@ -70,7 +70,7 @@ class Ball{
         
     }
 }
- let obj = new Ball();
+
  
 
  function animate(){
