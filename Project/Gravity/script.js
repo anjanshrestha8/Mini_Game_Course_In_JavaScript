@@ -11,9 +11,9 @@ class Ball{
     constructor(){
         this.x =Math.random()*innerWidth;
         this.y =Math.random()*innerHeight;
-        this.r=Math.random()*10;
+        this.r=20;
         this.x_speed=Math.random()*0.5;
-        this.y_speed=3;
+        this.y_speed=4;
         this.color= "color" ||"red";
 
         
@@ -26,7 +26,7 @@ class Ball{
     }
     move(){
         this.y=this.y+this.y_speed;
-        // this.x=this.x+this.x_speed;
+        this.x=this.x+this.x_speed;
         
     }
 
@@ -55,6 +55,7 @@ class Ball{
             this.color='red';
         }else{
             this.y_speed+=1;
+            console.log(this.y_speed);
         }
         
     }
