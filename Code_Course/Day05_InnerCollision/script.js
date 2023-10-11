@@ -3,6 +3,7 @@ const c = canvas.getContext('2d');
 canvas.width = 500;
 canvas.height = 500;
 let color ='black'
+let totalNumber =1000;
 
 let boxs =[];
 
@@ -72,7 +73,7 @@ canvas.addEventListener("mousemove" , (event) =>{
 
 });
 
-for(let i =0;i<=10;i++){
+for(let i =0;i<=totalNumber;i++){
     boxs.push(new Box());
 }
 
@@ -80,7 +81,7 @@ for(let i =0;i<=10;i++){
 function animate(){
 
     c.clearRect(0,0,canvas.width,canvas.height);
-    for(let i=0;i<=10;i++){
+    for(let i=0;i<=totalNumber;i++){
         boxs[i].update();
     }
     // new rect made using mouse hover
