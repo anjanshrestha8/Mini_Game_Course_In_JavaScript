@@ -43,18 +43,18 @@ class Box{
 
     }
     // collision among boxes
-    innerCollision(){
-        if(x + 50 > this.position.x  && this.position.x+50 > x && y+50 > this.position.y && this.position.y +50 >y ){
-        this.velocity.y = this.velocity.y - 2;
+    // innerCollision(){
+    //     if(x + 50 > this.position.x  && this.position.x+50 > x && y+50 > this.position.y && this.position.y +50 >y ){
+    //     this.velocity.y = this.velocity.y - 2;
 
-        this.position.y =this.position.y + this.velocity.y;
+    //     this.position.y =this.position.y + this.velocity.y;
             
            
-        }
-        else{
-            color="blue"
-        }
-    }
+    //     }
+    //     else{
+    //         color="blue"
+    //     }
+    // }
     // call all function
     update(){
         this.draw();
