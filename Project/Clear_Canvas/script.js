@@ -3,6 +3,7 @@ const c = canvas.getContext('2d');
 
 canvas.width="500"
 canvas.height="500"
+
 let color ="red"
 
 let totalBox =1000;
