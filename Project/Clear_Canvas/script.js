@@ -4,19 +4,20 @@ const c = canvas.getContext('2d');
 canvas.width="700"
 canvas.height="600"
 
-let color ="red"
+let color ="rgb(0,0,0)"
 
-let totalBox =1000;
+let totalBox =2500;
 
 let boxs =[];
 
-const peaky = new Image();
-peaky.src ='manga.jpeg'
+const image= new Image() ;
+image.src="manga.jpeg"
+
 
 class Box{
     constructor(){
         this.position ={x:Math.random()*650,y:Math.random()*950};
-        this.size={width:50,height:50};
+        this.size={width:Math.random()*50,height:Math.random()*50};
         
        
     }
@@ -53,36 +54,39 @@ canvas.addEventListener("mousemove",(event) =>{
 });
 
 // box object store garxa
-for(let i =0; i<=totalBox;i++){
+
+    for(let i =0; i<=totalBox;i++){
    
-    boxs.push(new Box());
-}
+        boxs.push(new Box());
+    }
+    
+    let obj = new Box();
+    
 
-let obj = new Box();
 
-
-
-
+let i =Math.random()*(3-0) + -0;
 function animate(){
    
 
     c.clearRect(0,0,canvas.width,canvas.height);
-    c.drawImage(peaky,0,0,700,1000);
+    c.drawImage(image,0,0,700,1000); 
     for(let i =0; i<=totalBox;i++){
         boxs[i].draw();
     }
     // obj.draw();
     c.beginPath();
+    c.strokeStyle="black"
+    c.fillStyle="white";
     c.rect(x,y,50,50);
     c.fill();
-
+    c.stroke();
    
 
 
         // box ma collison cheeck garxa
         for(let i=0;i<=totalBox;i++){
             if(x + 50 > boxs[i].position.x  && boxs[i].position.x+50 > x && y+50 > boxs[i].position.y && boxs[i].position.y +50 >y ){
-                console.log("collison vako xa ");
+                
         boxs[i].colloision();
 
         }
@@ -92,8 +96,10 @@ function animate(){
     }//else{
     //     color='red'
     // }
+    
   
 
     requestAnimationFrame(animate);
 }
 animate();
+
