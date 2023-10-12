@@ -4,7 +4,7 @@ const c = canvas.getContext('2d');
 canvas.width="700"
 canvas.height="600"
 
-let color ="rgb(0,0,0)"
+let color ="rgb(100,100,100)"
 
 let totalBox =2500;
 
