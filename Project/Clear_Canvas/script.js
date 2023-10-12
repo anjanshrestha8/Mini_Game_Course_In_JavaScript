@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
 
-canvas.width="500"
-canvas.height="500"
+canvas.width="700"
+canvas.height="600"
 
 let color ="red"
 
@@ -10,9 +10,12 @@ let totalBox =1000;
 
 let boxs =[];
 
+const peaky = new Image();
+peaky.src ='manga.jpeg'
+
 class Box{
     constructor(){
-        this.position ={x:Math.random()*450,y:Math.random()*450};
+        this.position ={x:Math.random()*650,y:Math.random()*950};
         this.size={width:50,height:50};
         
        
@@ -64,13 +67,16 @@ function animate(){
    
 
     c.clearRect(0,0,canvas.width,canvas.height);
-    for(let i =0; i<=100;i++){
+    c.drawImage(peaky,0,0,700,1000);
+    for(let i =0; i<=totalBox;i++){
         boxs[i].draw();
     }
     // obj.draw();
     c.beginPath();
     c.rect(x,y,50,50);
     c.fill();
+
+   
 
 
         // box ma collison cheeck garxa
