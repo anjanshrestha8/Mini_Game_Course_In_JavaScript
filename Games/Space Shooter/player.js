@@ -1,6 +1,6 @@
 class Player{
     constructor(){
-        this.position ={x:0,y:0,};
+        this.position ={x:250,y:300,};
         this.size ={width:50,height:50};
         this.velocity ={x:0,y:0,};
     }
