@@ -87,7 +87,8 @@ function animate(){
         for(let i=0;i<=totalBox;i++){
             if(x + 50 > boxs[i].position.x  && boxs[i].position.x+50 > x && y+50 > boxs[i].position.y && boxs[i].position.y +50 >y ){
                 
-        boxs[i].colloision();
+            boxs[i].colloision();
+        
 
         }
         // obj.move();
