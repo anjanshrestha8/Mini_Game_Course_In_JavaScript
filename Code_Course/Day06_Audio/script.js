@@ -7,9 +7,11 @@ canvas.height = "500";
 
 const backgroundMusic = new Audio();
 //load this music
-backgroundMusic.src="./Sounds/bgsound.ogg";
+backgroundMusic.src="bgsound.ogg";
 // play the music
-backgroundMusic.play();
+function play(){
+    backgroundMusic.play();
+}
 // game loop
 function animate(){
     requestAnimationFrame(animate);
