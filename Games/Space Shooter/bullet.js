@@ -12,12 +12,7 @@ class Bullet{
         c.drawImage(this.image,this.position.x,this.position.y,this.size.width,this.size.height);
         // c.fill();
     }
-    checkCollision(){
-        if(this.position.y == 0){
-            
-            this. velocity.y = this.velocity.y *(-0.1);
-        }
-    }
+    
     move(){
         this.position.y += this.velocity.y;
     }

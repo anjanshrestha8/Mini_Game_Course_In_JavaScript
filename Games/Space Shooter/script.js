@@ -12,7 +12,7 @@ function loop(){
     for(let i=0;i<allBullets.length;i++){
         allBullets[i].draw();
         allBullets[i].move();
-        allBullets[i].checkCollision();
+   
 
 
 

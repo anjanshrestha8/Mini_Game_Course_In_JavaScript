@@ -9,9 +9,10 @@ const spriteHeight="523";
 const playerImage = new Image();
 playerImage.src='shadow_dog.png';
 let frameX =0;
-let frameY =4 ;
+let frameY =8 ;
 let gameFrame =0;
 let delay =4;
+// var case =document.getElementById('Action').value;
 
 function animate(){
     c.clearRect(0,0,canvas.width,canvas.height);
