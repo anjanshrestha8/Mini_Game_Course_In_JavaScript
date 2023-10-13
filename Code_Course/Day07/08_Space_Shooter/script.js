@@ -6,17 +6,16 @@ canvas.height="600";
 
 const player = new Player();
 let allBullets =[];
-
+let enemy = new Enemy();
 function loop(){
     c.clearRect(0,0,canvas.width,canvas.height);
     for(let i=0;i<allBullets.length;i++){
         allBullets[i].draw();
         allBullets[i].move();
-   
-
-
-
     }
+    enemy.update();
+    enemy.collision(player);
+
     player.update();
     
     requestAnimationFrame(loop);
