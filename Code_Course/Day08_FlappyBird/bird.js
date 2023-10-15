@@ -29,6 +29,7 @@ class Bird{
         if(this.position.y + this.size.height >canvas.height){
             this.position.y = canvas.height - this.size.height;
             this.isDead = true;
+            
            
         }
     }

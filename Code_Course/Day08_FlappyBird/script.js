@@ -13,10 +13,20 @@ const bg1= new Background(bg.size.width,0);
 // game loop
 function animate(){
     c.clearRect(0,0,canvas.width,canvas.height);
+
+    // 1
+    // game Logic
     bg.update(obj.isDead);
     bg1.update(obj.isDead);
-
     obj.update();
+
+    // 2
+    if(obj.isDead){
+        c.beginPath();
+        c.fillStyle="black";
+        c.font = "40px sans serif bold";
+        c.fillText("Game Over", (canvas.width/4)-10, canvas.height/4);
+    }
     
     requestAnimationFrame(animate);
 }
