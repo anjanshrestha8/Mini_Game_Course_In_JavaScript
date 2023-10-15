@@ -3,9 +3,9 @@ class Bird{
         this.position ={x:canvas.width/2,y:0};
         this.size ={width:40,height:35};
         this.velocity ={x:0,y:0};
-        this.acceleration =0.4;
+        this.acceleration =0.3;
         this.img  = new Image();
-        this.img.src="./frame-1.png"
+        this.img.src="./frame-l.png"
         this.isDead = false;
     }
     draw(){
@@ -22,7 +22,7 @@ class Bird{
 
     }
     jump(){
-        this.velocity.y =-3;
+        this.velocity.y =-5;
 
     }
     borderCollision(){
