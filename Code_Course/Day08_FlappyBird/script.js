@@ -7,6 +7,8 @@ canvas.height = "500";
 const obj= new Bird();
 const bg= new Background(0,0);
 const bg1= new Background(bg.size.width,0);
+const pipe = new Pipe();
+
 
 
 
@@ -18,6 +20,7 @@ function animate(){
     // game Logic
     bg.update(obj.isDead);
     bg1.update(obj.isDead);
+    pipe.draw();
     obj.update();
 
     // 2
