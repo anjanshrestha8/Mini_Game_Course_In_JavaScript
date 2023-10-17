@@ -43,15 +43,15 @@ class Pipe{
     moveLeft(){
         if(this.position.x + this.size.width <= 0){
             this.position.x = canvas.width;
-            this.size.height= Math.random() *(200-30) + 30;
+            this.size.height= Math.random() *(250 - 0) + 0;
 
         }
         this.position.x += this.velocity.x; 
 
    }
     update(isDead){
-        this.draw();
-        this.draw1();
+        this.drawUpper();
+        this.drawLower();
         this.checkCollision();
         if(! isDead){
             this.moveLeft();
