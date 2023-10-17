@@ -18,7 +18,7 @@ class Bird{
     move(){
         this.velocity.y += this.acceleration;
         this.position.y +=this.velocity.y;
-        console.log(this.velocity.y);
+     
 
     }
     jump(){
