@@ -14,6 +14,8 @@ class Pipe{
         }
         this.image = new Image();
         this.image.src="./pipe-up.png"
+        this.img = new Image();
+        this.img.src ="./pipe-down.png"
     }
         // draw upper pipe
     drawUpper(){
@@ -25,8 +27,7 @@ class Pipe{
     // draw lower pipe
     drawLower(){
         c.beginPath();
-        c.fillStyle = "red"
-        c.fillRect(this.position.x ,this.position.y +this.size.height +150,this.size.width,this.size.height)
+        c.drawImage(this.img,this.position.x ,this.position.y +this.size.height +150,this.size.width,this.size.height)
        
     }
     checkCollision(){
