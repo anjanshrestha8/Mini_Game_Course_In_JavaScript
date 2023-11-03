@@ -42,6 +42,7 @@ class Pipe{
         if(this.position.x + this.size.width <= 0){
             this.position.x = canvas.width;
             this.size.height= Math.random() *(250 - 0) + 0;
+            
 
         }
         this.position.x += this.velocity.x; 
