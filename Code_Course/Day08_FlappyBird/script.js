@@ -4,7 +4,7 @@ const c = canvas.getContext('2d');
 canvas.width = "300";
 canvas.height = "500";
 
-const bird= new Bird();
+const bird= new bird();
 const bg= new Background(0,0);
 const bg1= new Background(bg.size.width,0);
 const pipe = new Pipe();
