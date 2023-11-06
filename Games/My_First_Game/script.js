@@ -12,7 +12,7 @@ function background(){
 
 class Dragon{
     constructor(){
-        this.position={x:10,y:10};
+        this.position={x:300,y:10};
         this.size={width:50,height:50};
         this.velocity={x:1,y:1};
         this.acceleration=0.8;
