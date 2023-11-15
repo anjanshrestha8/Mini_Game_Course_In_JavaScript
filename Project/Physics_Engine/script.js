@@ -3,6 +3,9 @@ const c = canvas.getContext('2d');
 canvas.width =400;
 canvas.height =400;
 
+const fireSound = new Audio();
+fireSound.src="fire.mp3";
+
 class Cannon{
     constructor(){
         this.position ={x: 10,y:295}
@@ -41,6 +44,7 @@ let mouseY;
 canvas.addEventListener("mousemove",(event) =>{
     mouseX=event.clientX;
     console.log(event.clientX)
+    fireSound.play();
 })
 let cannon = new Cannon();
 
