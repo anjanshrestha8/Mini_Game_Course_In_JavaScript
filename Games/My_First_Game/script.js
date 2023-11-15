@@ -24,6 +24,8 @@ class Dragon{
         c.fill();
     }
     moveUp(){
+        this.velocity.y=-5;
+        this.position.y +=this.velocity.y;
         
     }
     update(){
